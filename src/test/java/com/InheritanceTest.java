@@ -75,9 +75,8 @@ public class InheritanceTest {
   void should_call_super_class_methods() {
     DerivedFromBaseClassForOverridingCallingSuper instance = new DerivedFromBaseClassForOverridingCallingSuper();
 
-    // TODO: please modify the following code to pass the test
     // <--start
-    final String expectedName = null;
+    final String expectedName = "BaseClassForOverriding->DerivedFromBaseClassForOverridingCallingSuper";
     // --end-->
 
     assertEquals(expectedName, instance.getName());
