@@ -120,9 +120,8 @@ public class InheritanceTest {
   void should_not_make_you_confused_2() {
     DerivedFromBaseClassWithName derived = new DerivedFromBaseClassWithName();
 
-    // TODO: please modify the following code to pass the test
     // <--start
-    final String expected = null;
+    final String expected = "BaseClassWithName";
     // --end-->
 
     assertEquals(expected, derived.getName());
