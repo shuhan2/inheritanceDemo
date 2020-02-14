@@ -64,9 +64,8 @@ public class InheritanceTest {
   void should_call_most_derived_methods() {
     BaseClassForOverriding instance = new DerivedFromBaseClassForOverriding();
 
-    // TODO: please modify the following code to pass the test
     // <--start
-    final String expectedName = null;
+    final String expectedName = "DerivedFromBaseClassForOverriding";
     // --end-->
 
     assertEquals(expectedName, instance.getName());
