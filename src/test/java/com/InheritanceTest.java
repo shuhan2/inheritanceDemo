@@ -14,7 +14,6 @@ public class InheritanceTest {
 
   @Test
   void should_be_derived_from_object_class() {
-    // TODO: please modify the following code to pass the test
     // <--start
     final Class<?> expectedSuperClass = Object.class;
     // --end-->
@@ -26,9 +25,8 @@ public class InheritanceTest {
   void should_call_super_class_constructor() {
     DerivedFromSuperClassWithDefaultConstructor instance = new DerivedFromSuperClassWithDefaultConstructor();
 
-    // TODO: please modify the following code to pass the test
     // <--start
-    final String[] expected = {};
+    final String[] expected = {"SuperClassWithDefaultConstructor.constructor()", "DerivedFromSuperClassWithDefaultConstructor.constructor()"};
     // --end-->
 
     String[] logs = instance.getLogs();
@@ -92,7 +90,7 @@ public class InheritanceTest {
   @Test
   void should_use_caution_when_dealing_with_array_type() {
     DerivedFromSuperClassWithDefaultConstructor[] array = new DerivedFromSuperClassWithDefaultConstructor[4];
-    SuperClassWithDefaultConstructor[] arrayWithBaseType = (SuperClassWithDefaultConstructor[])array;
+    SuperClassWithDefaultConstructor[] arrayWithBaseType = (SuperClassWithDefaultConstructor[]) array;
 
     boolean willThrow = false;
 
@@ -164,8 +162,8 @@ public class InheritanceTest {
     final Optional<Boolean> expectedResult2 = Optional.empty();
     // --end-->
 
-    assertEquals(expectedResult1.get(), integer instanceof Integer );
-    assertEquals(expectedResult2.get(), integer instanceof Long );
+    assertEquals(expectedResult1.get(), integer instanceof Integer);
+    assertEquals(expectedResult2.get(), integer instanceof Long);
   }
 
   @SuppressWarnings({"SimplifiableJUnitAssertion", "EqualsWithItself"})
