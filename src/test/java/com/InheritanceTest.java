@@ -148,10 +148,9 @@ public class InheritanceTest {
   void should_use_instance_of_only_in_inheritance_relationship() {
     final Object integer = new Integer(42);  // the magic of life
 
-    // TODO: please modify the following code to pass the test
     // <--start
-    final Optional<Boolean> expectedResult1 = Optional.empty();
-    final Optional<Boolean> expectedResult2 = Optional.empty();
+    final Optional<Boolean> expectedResult1 = Optional.of(true);
+    final Optional<Boolean> expectedResult2 = Optional.of(false);
     // --end-->
 
     assertEquals(expectedResult1.get(), integer instanceof Integer);
