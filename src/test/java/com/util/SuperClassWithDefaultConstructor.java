@@ -8,11 +8,6 @@ public class SuperClassWithDefaultConstructor {
 
   private final List<String> logs = new ArrayList<>();
 
-  public static int test() {
-    System.out.println("111");
-    return 1;
-  }
-
   void addLog(String log) {
     logs.add(log);
   }
