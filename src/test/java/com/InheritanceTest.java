@@ -38,9 +38,8 @@ public class InheritanceTest {
   void should_call_super_class_constructor_continued() {
     DerivedFromSuperClassWithDefaultConstructor instance = new DerivedFromSuperClassWithDefaultConstructor(42);
 
-    // TODO: please modify the following code to pass the test
     // <--start
-    final String[] expected = {};
+    final String[] expected = {"SuperClassWithDefaultConstructor.constructor()", "DerivedFromSuperClassWithDefaultConstructor.constructor(int)"};
     // --end-->
 
     String[] logs = instance.getLogs();
