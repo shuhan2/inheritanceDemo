@@ -33,9 +33,20 @@ public class PersonForEquals {
   @SuppressWarnings("Contract")
   @Override
   public boolean equals(Object obj) {
-    // TODO: please modify the following code to pass the test
     // <--start
-    throw new NotImplementedException();
+    if (obj == null) {
+      return false;
+    }
+    if (obj == this) {
+      return true;
+    }
+    if (obj.getClass() != this.getClass()) {
+      return false;
+    }
+    String objName = ((PersonForEquals) obj).getName();
+    short objYearOfBirth = ((PersonForEquals) obj).getYearOfBirth();
+    return this.getName().equals(objName)
+        && this.getYearOfBirth() == objYearOfBirth;
     // --end-->
   }
 
@@ -43,7 +54,10 @@ public class PersonForEquals {
   public int hashCode() {
     // TODO: please modify the following code to pass the test
     // <--start
-    throw new NotImplementedException();
+    int result = 17;
+    result = 31 * result + this.name.hashCode();
+    result = 31 * result + this.yearOfBirth;
+    return result;
     // --end-->
   }
 }
